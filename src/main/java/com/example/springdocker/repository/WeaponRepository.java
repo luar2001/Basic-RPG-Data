@@ -9,5 +9,5 @@ import java.util.List;
 public interface WeaponRepository extends MongoRepository<Weapon , String> {
     List<Weapon> FindWeaponByType(WeaponType type);
     List<Weapon> FindWeaponByAttackValue(double attackValue);
-    String FindWeaponByName(String name);
+    Weapon FindWeaponByName(String name);
 }
