@@ -28,9 +28,9 @@ public class WeaponController {
     public Weapon getWeaponByName(@RequestBody String name) {return service.getWeaponByName(name);}
 
     @GetMapping("/Weapon")
-    public Weapon getWeaponByType(@RequestBody WeaponType type) {return service.getWeaponByType(type);}
+    public List<Weapon> getWeaponByType(@RequestBody WeaponType type) {return service.getWeaponByType(type);}
 
     @GetMapping("/Weapon")
-    public Weapon getWeaponByAttackValue(@RequestBody double attackValue) {return service.getWeaponByAttackValue(attackValue);}
+    public List<Weapon> getWeaponByAttackValue(@RequestBody double attackValue) {return service.getWeaponByAttackValue(attackValue);}
 
 }
