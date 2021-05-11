@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Species {
     String Species;
+    double attackBonus;
 }
