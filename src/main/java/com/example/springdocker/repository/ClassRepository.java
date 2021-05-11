@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClassRepository extends MongoRepository<Class, String> {
-    String FindClassByClassName(String className);
+    Class FindClassByClassName(String className);
 }
