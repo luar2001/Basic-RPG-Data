@@ -31,12 +31,13 @@ public class MathCalculation {
 
     /**
      * divide x and y and returns it.
+     *
      * @param x integer
      * @param y integer
      * @return x/y
      */
-    public int divide(int x, int y){
-        return x/y;
+    public double divide(int x, int y) {
+        return x / y;
     }
 
 }
