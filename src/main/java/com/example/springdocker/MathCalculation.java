@@ -34,10 +34,11 @@ public class MathCalculation {
      *
      * @param x integer
      * @param y integer
-     * @return x/y
+     * @return x/y float
      */
     public double divide(int x, int y) {
         return x / y;
+
     }
 
 }
