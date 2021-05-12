@@ -33,9 +33,9 @@ public class MathCalculation {
      * divide x and y and returns it.
      * @param x integer
      * @param y integer
-     * @return x/y
+     * @return x/y float
      */
-    public int divide(int x, int y){
+    public float divide(int x, int y){
         return x/y;
     }
 
