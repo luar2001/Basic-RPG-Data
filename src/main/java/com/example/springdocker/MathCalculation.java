@@ -36,7 +36,7 @@ public class MathCalculation {
      * @param y integer
      * @return x/y float
      */
-    public double divide(int x, int y) {
+    public double divide(double x, double y) {
         return x / y;
 
     }
