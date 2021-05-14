@@ -32,12 +32,18 @@ public class MathCalculation {
     /**
      * divide x and y and returns it.
      *
-     * @param x integer
-     * @param y integer
-     * @return x/y float
+     * @param x double
+     * @param y double
+     * @return x/y double
+     * @throws IllegalArgumentException if any parameter is 0
      */
     public double divide(double x, double y) {
-        return x / y;
+        if (x == 0 & y == 0 || x == 0 || y == 0) {
+            throw new IllegalArgumentException("Can't divide by 0");
+        } else {
+            return x / y;
+        }
+
 
     }
 
