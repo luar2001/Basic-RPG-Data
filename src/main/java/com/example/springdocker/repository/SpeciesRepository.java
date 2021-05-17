@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SpeciesRepository extends MongoRepository<Species, String> {
-    Species FindSpeciesByName(String name);
+    Species findSpeciesBySpecies(String species);
 }

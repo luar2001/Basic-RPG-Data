@@ -16,21 +16,21 @@ import java.util.List;
 public class WeaponController {
     private final WeaponService service;
 
-    @GetMapping("/Weapon")
+    @GetMapping("/weapon")
     public List<Weapon> getWeapon(){
         return service.getWeapon();
     }
 
-    @PostMapping("/Weapon")
+    @PostMapping("/weapon")
     public void saveNewWeapon(@RequestBody Weapon weapon) {service.saveNewWeapon(weapon);}
 
-    @GetMapping("/Weapon")
+    @GetMapping("/weapon/byname")
     public Weapon getWeaponByName(@RequestBody String name) {return service.getWeaponByName(name);}
 
-    @GetMapping("/Weapon")
+    @GetMapping("/weapon/bytype")
     public List<Weapon> getWeaponByType(@RequestBody WeaponType type) {return service.getWeaponByType(type);}
 
-    @GetMapping("/Weapon")
+    @GetMapping("/weapon/byattack")
     public List<Weapon> getWeaponByAttackValue(@RequestBody double attackValue) {return service.getWeaponByAttackValue(attackValue);}
 
 }

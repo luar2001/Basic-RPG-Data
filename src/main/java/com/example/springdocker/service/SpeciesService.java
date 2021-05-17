@@ -22,7 +22,7 @@ public class SpeciesService {
         repository.save(species);
     }
 
-    public Species getSpeciesByName(String name) {
-        return repository.FindSpeciesByName(name);
+    public Species getSpeciesBySpecies(String species) {
+        return repository.findSpeciesBySpecies(species);
     }
 }

@@ -19,16 +19,22 @@ public class SpeciesController {
     private final SpeciesService service;
 
     @GetMapping("/species")
-    public List<Species> getSpecies(){return service.getSpecies();}
+    public List<Species> getSpecies() {
+        return service.getSpecies();
+    }
 
-    @PostMapping("/foods")
+    @PostMapping("/species")
     public void saveNewSpecies(@RequestBody Species species) {
         service.saveNewSpecies(species);
     }
 
-    @GetMapping("/species")
-    public Species getSpeciesByName(@RequestBody String name) {return service.getSpeciesByName(name);}
+    @GetMapping("/specieses")
+    public Species getSpeciesBySpecies(@RequestBody String species) {
+        return service.getSpeciesBySpecies(species);
+    }
 
 
+    // http://localhost:8081/species?
+    //http://localhost:8081/specieses?
 
 }

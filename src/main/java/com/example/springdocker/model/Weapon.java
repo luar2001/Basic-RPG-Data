@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Weapon {
+    String id;
     String name;
     double attackValue;
     WeaponType type;

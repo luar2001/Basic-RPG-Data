@@ -2,7 +2,6 @@ package com.example.springdocker.controller;
 
 import com.example.springdocker.model.*;
 import com.example.springdocker.model.Character;
-import com.example.springdocker.model.Class;
 import com.example.springdocker.service.CharacterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,42 +17,54 @@ public class CharacterController {
     private CharacterService service;
 
     @GetMapping("/character")
-    public List<Character> getCharacter(){
+    public List<Character> getCharacter() {
         return service.getCharacter();
     }
 
     @PostMapping("/character")
-    public void saveNewClass(@RequestBody Character character) {service.saveNewCharacter(character);}
+    public void saveNewClass(@RequestBody Character character) {
+        service.saveNewCharacter(character);
+    }
 
-    @GetMapping("/character")
-    public Character getCharacterByName(@RequestBody String name) {return service.getCharacterByName(name);}
+    @GetMapping("/byname")
+    public Character getCharacterByName(@RequestBody String name) {
+        return service.getCharacterByName(name);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByAge(@RequestBody int age) {return service.getCharacterByAge(age);}
+    @GetMapping("/byage")
+    public List<Character> getCharacterByAge(@RequestBody int age) {
+        return service.getCharactersByAge(age);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByGender(@RequestBody String gender) {return service.getCharacterByGender(gender);}
+    @GetMapping("/bygender")
+    public List<Character> getCharacterByGender(@RequestBody String gender) {
+        return service.getCharactersByGender(gender);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterBySpecies(@RequestBody Species species) {return service.getCharacterBySpecies(species);}
+    @GetMapping("/byspecies")
+    public List<Character> getCharacterBySpecies(@RequestBody Species species) {
+        return service.getCharactersBySpecies(species);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByLevel(@RequestBody int level) {return service.getCharacterByLevel(level);}
+    @GetMapping("/bylevel")
+    public List<Character> getCharacterByLevel(@RequestBody int level) {
+        return service.getCharactersByLevel(level);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByClass(@RequestBody Class rpgClass) {return service.getCharacterByClass(rpgClass);}
+    @GetMapping("/maxhealth")
+    public List<Character> getCharacterByMaxHealth(@RequestBody double maxHealth) {
+        return service.getCharactersByMaxHealth(maxHealth);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByMaxHealth(@RequestBody double maxHealth) {return service.getCharacterByMaxHealth(maxHealth);}
+    @GetMapping("/byweapon")
+    public List<Character> getCharacterByWeapon(@RequestBody Weapon weapon) {
+        return service.getCharactersByWeapon(weapon);
+    }
 
-    @GetMapping("/character")
-    public List<Character> getCharacterByWeapon(@RequestBody Weapon weapon) {return service.getCharacterByWeapon(weapon);}
-
-    @GetMapping("/character")
-    public List<Character> getCharacterByFavoriteFood(@RequestBody Food favoriteFood) {return service.getCharacterByFavoriteFood(favoriteFood);}
-
-
-
+    @GetMapping("/byfavfood")
+    public List<Character> getCharacterByFavoriteFood(@RequestBody Food favoriteFood) {
+        return service.getCharactersByFavoriteFood(favoriteFood);
+    }
 
 
 }

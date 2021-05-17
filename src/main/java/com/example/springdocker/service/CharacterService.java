@@ -2,7 +2,6 @@ package com.example.springdocker.service;
 
 import com.example.springdocker.model.*;
 import com.example.springdocker.model.Character;
-import com.example.springdocker.model.Class;
 import com.example.springdocker.repository.CharacterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,39 +23,35 @@ private final CharacterRepository repository;
     }
 
     public Character getCharacterByName(String name) {
-        return repository.FindCharacterByName(name);
+        return repository.findCharacterByName(name);
     }
 
-    public List<Character> getCharacterByAge(int age) {
-        return repository.FindCharactersByAge(age);
+    public List<Character> getCharactersByAge(int age) {
+        return repository.findCharactersByAge(age);
 
     }
 
-    public List<Character> getCharacterByGender(String gender) {
-        return repository.FindCharactersByGender(gender);
+    public List<Character> getCharactersByGender(String gender) {
+        return repository.findCharactersByGender(gender);
     }
 
-    public List<Character> getCharacterBySpecies(Species species) {
-        return repository.FindCharactersBySpecies(species);
+    public List<Character> getCharactersBySpecies(Species species) {
+        return repository.findCharactersBySpecies(species);
     }
 
-    public List<Character> getCharacterByLevel(int level) {
-        return repository.FindCharactersByLevel(level);
+    public List<Character> getCharactersByLevel(int level) {
+        return repository.findCharactersByLevel(level);
     }
 
-    public List<Character> getCharacterByClass(Class rpgClass) {
-        return repository.FindCharactersByClass(rpgClass);
+    public List<Character> getCharactersByMaxHealth(double maxHealth) {
+        return repository.findCharactersByMaxHealth(maxHealth);
     }
 
-    public List<Character> getCharacterByMaxHealth(double maxHealth) {
-        return repository.FindCharactersByMaxHealth(maxHealth);
+    public List<Character> getCharactersByWeapon(Weapon weapon) {
+        return repository.findCharactersByWeapon(weapon);
     }
 
-    public List<Character> getCharacterByWeapon(Weapon weapon) {
-        return repository.FindCharactersByWeapon(weapon);
-    }
-
-    public List<Character> getCharacterByFavoriteFood(Food favoriteFood) {
-        return repository.FindCharactersByFavoriteFood(favoriteFood);
+    public List<Character> getCharactersByFavoriteFood(Food favoriteFood) {
+        return repository.findCharactersByFavoriteFood(favoriteFood);
     }
 }

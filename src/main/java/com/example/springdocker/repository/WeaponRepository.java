@@ -9,8 +9,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface WeaponRepository extends MongoRepository<Weapon , String> {
-    List<Weapon> FindWeaponByType(WeaponType type);
-    List<Weapon> FindWeaponByAttackValue(double attackValue);
-    Weapon FindWeaponByName(String name);
+public interface WeaponRepository extends MongoRepository<Weapon, String> {
+    List<Weapon> findWeaponByType(WeaponType type);
+
+    List<Weapon> findWeaponByAttackValue(double attackValue);
+
+    Weapon findWeaponByName(String name);
 }

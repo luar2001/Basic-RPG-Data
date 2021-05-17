@@ -21,7 +21,7 @@ public class WeaponTypeController {
     @PostMapping("/class")
     public void saveNewWeaponType(@RequestBody WeaponType weaponType) {service.saveNewWeaponType(weaponType);}
 
-    @GetMapping("/weapontype")
+    @GetMapping("/bytype")
     public WeaponType getWeaponTypesByType(@RequestBody String type) {return service.getWeaponTypesByType(type);}
 
 

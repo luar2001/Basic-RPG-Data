@@ -22,14 +22,14 @@ public class WeaponService {
     }
 
     public Weapon getWeaponByName(String name) {
-        return repository.FindWeaponByName(name);
+        return repository.findWeaponByName(name);
     }
 
     public List<Weapon> getWeaponByType(WeaponType type) {
-        return repository.FindWeaponByType(type);
+        return repository.findWeaponByType(type);
     }
 
     public List<Weapon> getWeaponByAttackValue(double attackValue) {
-        return repository.FindWeaponByAttackValue(attackValue);
+        return repository.findWeaponByAttackValue(attackValue);
     }
 }

@@ -18,7 +18,7 @@ public class WeaponTypeService {
     }
 
     public WeaponType getWeaponTypesByType(String type) {
-        return repository.FindWeaponTypeByType(type);
+        return repository.findWeaponTypeByType(type);
     }
 
     public void saveNewWeaponType(WeaponType weaponType) {

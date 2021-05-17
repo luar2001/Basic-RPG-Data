@@ -11,15 +11,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Character {
+    String id;
     String name;
     int age;
     String gender;
     Species species;
     int level;
-    Class rpgClass;
     double attack;
-    double max_health;
-    double current_health;
+    double maxHealth;
+    double currentHealth;
     Weapon weapon;
     Food favoriteFood;
 }
