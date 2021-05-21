@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Created by Name Here
+ * Created by Lukas Aronsson
  * Date: 14/05/2021
  * Time: 21:21
  * Project: spring-docker-demo
