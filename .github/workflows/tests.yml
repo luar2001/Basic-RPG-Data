@@ -13,7 +13,7 @@ jobs:
       - name: Check Code
         uses: action/checkout@v2
         with:
-          java-version: '16'
+          java-version: '11'
           distribution: 'adopt'
       - name: build Jar
         run: mvn test

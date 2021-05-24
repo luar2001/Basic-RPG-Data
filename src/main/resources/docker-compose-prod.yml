@@ -7,37 +7,33 @@ services:
       - 27017:27017
     volumes:
       - /data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
-
+    # environment:
+    #  MONGO_INITDB_ROOT_USERNAME: root
+    #  MONGO_INITDB_ROOT_PASSWORD: password
   mongo-express:
     image: mongo-express:latest
     ports:
       - 8081:8081
     volumes:
       - /data/db
-    environment:
-      ME_CONFIG_MONGODB_SERVER: mongo
-      ME_CONFIG_BASICAUTH_USERNAME: root
-      ME_CONFIG_BASICAUTH_PASSWORD: password
-      ME_CONFIG_MONGODB_PORT: 27017
+      # environment:
+      # ME_CONFIG_MONGODB_SERVER: mongodb
+      # ME_CONFIG_BASICAUTH_USERNAME: root
+      # ME_CONFIG_BASICAUTH_PASSWORD: password
+      # ME_CONFIG_MONGODB_PORT: 27017
     depends_on:
       - mongo
-      -
-  springdemo:
-    image: springdemo:latest
+  spring-docker-demo:
+    image: spring-docker-demo:latest
     ports:
-      - 8080
+      - 8080 #i have problems with 8080 and have had for a time
     volumes:
       - /d/Programs/springdemo/:/app
     environment:
       DB_HOST: mongo
-      DB_USERNAME: root
-      DB_PASSWORD: password
-      DB_NAME: SpringDemoDB
       DB_PORT: 27017
+      DB_NAME: db-prod
       SPRING_PROFILE_ACTIVE: prod
       depends_on:
         - mongo
-        - mongo-express
+        # - mongo-express
