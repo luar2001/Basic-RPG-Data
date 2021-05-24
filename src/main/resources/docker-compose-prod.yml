@@ -34,6 +34,6 @@ services:
       DB_PORT: 27017
       DB_NAME: db-prod
       SPRING_PROFILE_ACTIVE: prod
-      depends_on:
-        - mongo
-        # - mongo-express
+    depends_on:
+      - mongo
+      # - mongo-express
