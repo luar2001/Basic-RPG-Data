@@ -24,7 +24,7 @@ services:
       ME_CONFIG_MONGODB_PORT: 27017
     depends_on:
       - mongo
-
+      -
   springdemo:
     image: springdemo:latest
     ports:
@@ -41,4 +41,3 @@ services:
       depends_on:
         - mongo
         - mongo-express
-
